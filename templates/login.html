@@ -1,0 +1,29 @@
+{% extends base.html %}
+
+{% block title %} {{ title }} {% end %}
+
+{% block nav %}
+<ul class="nav navbar-nav">
+    <li><a href="/">Index</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+	<li class="active"><a href="/admin/login">Login</a></li>
+</ul>
+{% end %}
+
+{% block body%}
+<div class="login">
+    <div class="from-group tip">
+    
+    </div>
+	<div class="from-group">
+		<label>username</lable>
+		<input id="username" type="text" placeholder="username"></input><br/>
+		<label>password</lable>
+		<input id="password" type="password" placeholder="password"></input><br/>
+	</div>
+	<div class="from-group">
+		<input id="login" class="btn btn-success" type="button" value="Login"></input>
+	</div>
+</div>
+{% end%}

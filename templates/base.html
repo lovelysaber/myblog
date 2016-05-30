@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1,user-scalable=no">
+    <meta name="renderer" content="webkit">
+	<title>{% block title %} {% end %}</title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//cdn.bootcss.com/highlight.js/9.4.0/styles/qtcreator_dark.min.css" rel="stylesheet">
+	<link href="{{ static_url("css/breeze.css") }}" rel="stylesheet">
+</head>
+<body>
+<div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+	    <div class="navbar-header">
+			<a class="navbar-brand" href="/">Blog</a>
+	    </div>
+	    <div class="collapse navbar-collapse">
+        	{% block nav %} {% end %}
+	    </div>
+    </div>
+</nav>
+</div>
+{% block body %} {% end %}
+    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="//cdn.bootcss.com/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script src="{{ static_url("js/breeze.js") }}"></script>
+</body>
+</html>

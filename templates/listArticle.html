@@ -1,0 +1,22 @@
+{% extends base.html %}
+
+{% block title%}{{ title }}{% end %}
+
+{% block nav%}
+<ul class="nav navbar-nav">
+    <li ><a href="/">Home</a></li>
+    <li class="active"><a href="/admin/list">list</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="/admin/login">Login</a></li>
+</ul>
+{% end %}
+
+{% block body%}
+{% for article in articles%}
+<div class="jumbotron listArticle">
+    <p id={{ article.id }} class="todop" >{{ article.title }}</p>
+	<input class="btn btn-primary" type="button" value="删除"></input>
+</div>
+{% end %}
+{% end %}

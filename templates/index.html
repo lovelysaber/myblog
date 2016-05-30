@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+
+{% block title %} {{ title }} {% end %}
+
+{% block nav %}
+<ul class="nav navbar-nav">
+    <li class="active"><a href="/">Index</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="/admin/login">Login</a></li>
+</ul>
+{% end %}
+
+{% block body %}
+{% for article in articles %}
+<div class="jumbotron bloglist" id={{ article.id }}>
+    <h2>{{ article.title }}</a></h2>
+    <p>{{ article.content[:200] }}</p>
+    <p><a id={{ article.url }} class="btn btn-primary btn-lg more" href="/more/{{ article.url }}" >More</a></p>
+</div>
+{% end %}
+{% end %}

@@ -1,0 +1,28 @@
+{% extends base.html %}
+{% block title %}{{ title }}{% end %}
+
+{% block nav%}
+<ul class="nav navbar-nav">
+    <li><a href="/">Index</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="/admin/login">Login</a></li>
+</ul>
+{% end %}
+
+{% block body %}
+<div class="addArticle">
+    <div class="form-group">
+        <label>标题</label><br/>
+        <input id="artTitle" class="addText" type="text" placeholder="请输入文章标题"></input>
+    </div>
+    <div class="form-group">
+        <label>内容</label><br/>
+        <textarea id="artContent" class="addTextarea" placeholder="请输入文章内容"></textarea>
+    </div>
+    <div class="form-group">
+        <input id="addArticle" class="btn btn-lg btn-primary" type="button" value="添加"></input>
+    </div>
+</div>
+{% end %}
+
